@@ -1,0 +1,334 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body Section with Animated Gradient Background */
+body {
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #f9f9f9, #d4e157, #81d4fa, #ffab91);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+ /* Header Section with Animated Background */
+header {
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    animation: fadeInDown 1s ease-out;
+    background: linear-gradient(-45deg, #4CAF50, #1E88E5, #E91E63, #FF9800);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    animation: slideInFromLeft 1s ease-in-out;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+  
+  /* Section Styling */
+  /* Section with Animated Entry (Fade and Slide-Up) */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    opacity: 0; /* Initially invisible */
+    transform: translateY(50px); /* Initially positioned lower */
+    animation: fadeInUp 1.2s ease-in-out forwards; /* Animation applied */
+  }
+  
+  /* Fade and Slide-Up Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0; /* Fully transparent */
+      transform: translateY(50px); /* Positioned lower */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to original position */
+    }
+  }
+  
+  
+  section:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  
+  section:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+  
+  section:nth-of-type(4) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    margin: 0.5rem auto;
+    animation: growWidth 1s ease-in-out;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    justify-items: center; /* Align items horizontally in the grid */
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .skill-item i {
+    font-size: 1.5rem;
+    color: #4CAF50;
+  }
+  
+  .skill-item span {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .skill-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .skill-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .skill-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .skill-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  .skill-item:nth-child(5) {
+    animation-delay: 1s;
+  }
+  
+  .skill-item:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Project Cards */
+  .project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: #f4f4f4;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes growWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50px;
+    }
+  }
+  
+
+  /* Professional Experience Section */
+#experience {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+  }
+  
+  #experience h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .experience {
+    margin-bottom: 2rem;
+  }
+  
+  .experience h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .experience ul {
+    padding-left: 1.5rem;
+  }
+  
+  .experience ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    color: #333;
+    position: relative;
+  }
+  
+  .experience ul li::before {
+    content: '✓'; /* Use a checkmark for list items */
+    position: absolute;
+    left: -1.2rem;
+    color: #4CAF50;
+    font-size: 1rem;
+  }
+  
+  /*project*/
+  .project-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card ul {
+    padding-left: 1.5rem;
+  }
+  
+  .project-card ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    color: #333;
+    position: relative;
+  }
+  
+  .project-card ul li::before {
+    content: '✓'; /* Use a checkmark for list items */
+    position: absolute;
+    left: -1.2rem;
+    color: #4CAF50;
+    font-size: 1rem;
+  }

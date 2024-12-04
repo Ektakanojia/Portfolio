@@ -258,77 +258,105 @@ section {
   }
   
 
-  /* Professional Experience Section */
-#experience {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
-  #experience h2 {
+  /* Section styles */
+  #projects {
+    margin-top: 30px;
+  }
+  
+  #projects h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #fff;
+    color: #2c3e50;
   }
   
-  .experience {
-    margin-bottom: 2rem;
+  /* Grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
   }
   
-  .experience h3 {
+  /* Card styles */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-content h3 {
     font-size: 1.5rem;
+    margin: 10px 0;
+    color: #34495e;
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3498db;
     color: #fff;
-    margin-bottom: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
-  .experience p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
+  .project-link:hover {
+    background-color: #2980b9;
   }
   
-  .experience ul {
-    padding-left: 1.5rem;
-  }
-  
-  .experience ul li {
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-    color: #333;
-    position: relative;
-  }
-  
-  .experience ul li::before {
-    content: '✓'; /* Use a checkmark for list items */
-    position: absolute;
-    left: -1.2rem;
-    color: #4CAF50;
-    font-size: 1rem;
-  }
-  
-  /*project*/
-  .project-card p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-  }
-  
-  .project-card ul {
-    padding-left: 1.5rem;
-  }
-  
-  .project-card ul li {
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-    color: #333;
-    position: relative;
-  }
-  
-  .project-card ul li::before {
-    content: '✓'; /* Use a checkmark for list items */
-    position: absolute;
-    left: -1.2rem;
-    color: #4CAF50;
-    font-size: 1rem;
-  }
+  /* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-bottom: 10px;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #3498db;
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}

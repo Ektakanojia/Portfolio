@@ -48,6 +48,12 @@ header {
   header p {
     font-size: 1.2rem;
   }
+
+  #main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
   
   /* Gradient Animation */
   @keyframes gradientAnimation {
